@@ -10,7 +10,16 @@
           <a href="index3.html" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Contact</a>
+          <a href="https://github.com/Shahed-Chy-Suzan/laravel-sms" target="_blank" class="nav-link">Laravel-git</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="https://github.com/Shahed-Chy-Suzan/vuecli-sms" target="_blank" class="nav-link">VueCli-git</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="javascript:void()" class="nav-link">Laravel - VueCli - Passport</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <marquee style="color:blue;">Laravel - VueCli - Passport</marquee>
         </li>
       </ul>
 
