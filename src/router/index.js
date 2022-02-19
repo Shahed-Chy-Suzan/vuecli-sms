@@ -9,14 +9,14 @@ const routes = [
     path: '/',
     name: 'Login',
     component: Login,
-    meta: { guest: true }   //if authenticate, will never access this
+    meta: { guest: true }   //if authenticated/after authenticated, will never access this
   },
 
   {
     path: '/register',
     name: 'Register',
     component: Register,
-    meta: { guest: true }   //if authenticate, will never access this
+    meta: { guest: true }   //if authenticated/after authenticated, will never access this
   },
   
   {
