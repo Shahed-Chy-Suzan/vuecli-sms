@@ -79,8 +79,7 @@
             </div>
           </form>
           <p class="mb-0">
-            <router-link :to="{name:'Login'}"  class="text-center"
-              >Return to Login</router-link>
+            <router-link :to="{name:'Login'}"  class="text-center">Return to Login</router-link>
           </p>
         </div>
         <!-- /.card-body -->
