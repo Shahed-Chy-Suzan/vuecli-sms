@@ -57,6 +57,21 @@ export const auth = {
                 // console.log(err.response.data.errors)
             });
            })
+        },
+
+        REGISTRATION(context,registrationData){
+           return new Promise((resolve,reject)=>{
+              axios.post('/register',registrationData)
+              .then((res) => {
+                  // console.log(res.data)
+                context.commit('SET_AUTH_TOKEN',res.data.access_token)
+                context.commit('SET_AUTH_INFO',res.data.user)
+                resolve(res)
+              }).catch((err) => {
+                  reject(err)
+                  // console.log(err.response.data.errors)
+              });
+           })
         }
     },
 
