@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import store from '../store';
 import Login from '../views/auth/Login.vue'
 import Register from '../views/auth/Register.vue'
+import Forgot from '../views/auth/password/Forgot.vue'
+import Reset from '../views/auth/password/Reset.vue'
 import Home from '../views/pages/Home.vue'
 
 const routes = [
@@ -16,6 +18,20 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: Register,
+    meta: { guest: true }   //if authenticated/after authenticated, will never access this
+  },
+
+  {
+    path: '/forgot/password',
+    name: 'Forgot',
+    component: Forgot,
+    meta: { guest: true }   //if authenticated/after authenticated, will never access this
+  },
+
+  {
+    path: '/reset/password',
+    name: 'Reset',
+    component: Reset,
     meta: { guest: true }   //if authenticated/after authenticated, will never access this
   },
   
@@ -34,7 +50,7 @@ const router = createRouter({
 })
 
 // eslint-disable-next-line no-unused-vars
-router.beforeEach((to, from) => {
+router.beforeEach((to, from) => {                             // for route secure
   // instead of having to check every route record with
   // to.matched.some(record => record.meta.requiresAuth)
   if (to.meta.requiresAuth && !store.getters.GET_AUTH_STATUS) {

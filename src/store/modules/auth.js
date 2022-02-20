@@ -72,7 +72,20 @@ export const auth = {
                   // console.log(err.response.data.errors)
               });
            })
-        }
+        },
+
+        FORGOT(context,forgotPasswordMail){
+           return new Promise((resolve,reject)=>{
+              axios.post('/forgot',forgotPasswordMail)
+              .then((res) => {
+                  // console.log(res.data)
+                  resolve(res)
+              }).catch((err) => {
+                  reject(err)
+                  // console.log(err.response.data.errors)
+              });
+           })
+        },
     },
 
     mutations: {
